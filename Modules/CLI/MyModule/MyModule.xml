@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Examples</category>
+  <title>MyModule</title>
+  <description><![CDATA[This is a CLI module (based on GaussianBlurImageFilter) bundled in an extension]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/4.1/Modules/MyModule</documentation-url>
+  <license>Slicer</license>
+  <contributor>Julien Jomier (Kitware), Stephen Aylward (Kitware), Jean-Christophe Fillion-Robin (Kitware)</contributor>
+  <acknowledgements>This work was partially funded by NIH grant 3P41RR013218-12S1</acknowledgements>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/Output parameters</description>
+    <double>
+      <name>Median</name>
+      <longflag>--Median</longflag>
+      <description>Median</description>
+      <label>Median</label>
+      <default>128</default>
+    </double>
+    <double>
+      <name>OutsideValue</name>
+      <longflag>--OutsideValue</longflag>
+      <description>OutsideValue</description>
+      <label>OutsideValue</label>
+      <default>0</default>
+    </double>
+    <double>
+      <name>InsideValue</name>
+      <longflag>--InsideValue</longflag>
+      <description>InsideValue</description>
+      <label>InsideValue</label>
+      <default>128</default>
+    </double>
+    <double>
+      <name>Lower</name>
+      <longflag>--Lower</longflag>
+      <description>Lower</description>
+      <label>Lower</label>
+      <default>64</default>
+    </double>
+    <double>
+      <name>Upper</name>
+      <longflag>--Upper</longflag>
+      <description>Upper</description>
+      <label>Upper</label>
+      <default>128</default>
+    </double>
+    <integer-enumeration>
+      <name>Select</name>
+      <longflag>--Select</longflag>
+      <description>Select</description>
+      <label>Select</label>
+      <default>0</default>
+      <element>0</element>
+      <element>1</element>
+      <element>2</element>
+      <element>3</element>
+    </integer-enumeration>
+  </parameters>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index
+      <default>None</default>
+      <description>Input volume</description>
+    </image>
+    <image>
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <default>None</default>
+      <description>Output filtered</description>
+    </image>
+  </parameters>
+</executable>
